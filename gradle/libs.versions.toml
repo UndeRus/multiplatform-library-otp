@@ -1,0 +1,27 @@
+[versions]
+agp = "8.3.2"
+kotlin = "2.0.0"
+nexus-publish = "2.0.0"
+android-minSdk = "24"
+android-compileSdk = "34"
+buffer = "1.3.6"
+encoding = "2.0.0"
+kotlincrypto-hash = "0.3.0"
+kotlincrypto-macs = "0.3.0"
+kotlincrypto-secure-random = "0.1.0"
+kotlinx-datetime = "0.5.0"
+
+[libraries]
+kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
+nexus-publish = { module = "io.github.gradle-nexus.publish-plugin:io.github.gradle-nexus.publish-plugin.gradle.plugin", version.ref = "nexus-publish" }
+buffer = { module = "com.ditchoom:buffer", version.ref = "buffer" }
+encoding-base32 = { module = "io.matthewnelson.encoding:base32", version.ref = "encoding" }
+kotlincrypto-hash-sha2 = { module = "org.kotlincrypto.hash:sha2", version.ref = "kotlincrypto-hash" }
+kotlincrypto-macs-hmac-sha1 = { module = "org.kotlincrypto.macs:hmac-sha1", version.ref = "kotlincrypto-macs" }
+kotlincrypto-macs-hmac-sha2 = { module = "org.kotlincrypto.macs:hmac-sha2", version.ref = "kotlincrypto-macs" }
+kotlincrypto-secure-random = { module = "org.kotlincrypto:secure-random", version.ref = "kotlincrypto-secure-random" }
+kotlinx-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "kotlinx-datetime" }
+
+[plugins]
+androidLibrary = { id = "com.android.library", version.ref = "agp" }
+kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
